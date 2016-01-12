@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CiI-2l-eIU" customClass="LazyImageLoader">
+                                <rect key="frame" x="225" y="28" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="2pO-zx-u8H"/>
+                                    <constraint firstAttribute="width" constant="150" id="MhH-rO-Hw5"/>
+                                </constraints>
+                            </imageView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-160" maximumValue="160" stepValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="MZg-r4-xf2">
+                                <rect key="frame" x="12" y="514" width="94" height="29"/>
+                                <connections>
+                                    <action selector="onStepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nMn-t7-9xb"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" maximumValue="320" stepValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="G0Y-h4-XyU">
+                                <rect key="frame" x="12" y="551" width="94" height="29"/>
+                                <connections>
+                                    <action selector="onStepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LKQ-dX-wee"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcp-zQ-wmo">
+                                <rect key="frame" x="238" y="476" width="124" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="bqK-Ee-fXQ"/>
+                                </constraints>
+                                <state key="normal" title="set Remote image"/>
+                                <connections>
+                                    <action selector="onPressRemoteImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWf-Um-I7N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsC-ob-4bt">
+                                <rect key="frame" x="237" y="438" width="126" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="iPB-8H-WMZ"/>
+                                </constraints>
+                                <state key="normal" title="set disk image"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulh-Fy-FQb">
+                                <rect key="frame" x="237" y="400" width="126" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="XtD-1H-eK0"/>
+                                </constraints>
+                                <state key="normal" title="set bundle image"/>
+                                <connections>
+                                    <action selector="onPressBundleImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ntD-LX-WHF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sw7-pw-05w">
+                                <rect key="frame" x="237" y="362" width="126" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="WMd-cR-DIu"/>
+                                </constraints>
+                                <state key="normal" title="set nil image"/>
+                                <connections>
+                                    <action selector="onPressSetImagenil:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NFC-YP-Vbg"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" maximumValue="320" translatesAutoresizingMaskIntoConstraints="NO" id="TJk-h5-10s">
+                                <rect key="frame" x="114" y="514" width="94" height="29"/>
+                                <connections>
+                                    <action selector="onStepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="DRm-1S-BU4"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" maximumValue="320" translatesAutoresizingMaskIntoConstraints="NO" id="Cyw-CC-7hi">
+                                <rect key="frame" x="114" y="551" width="94" height="29"/>
+                                <connections>
+                                    <action selector="onStepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ubR-ye-9my"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1j-ou-hkK">
+                                <rect key="frame" x="217" y="513" width="105" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="5o2-YE-29X"/>
+                                </constraints>
+                                <state key="normal" title="delete cache"/>
+                                <connections>
+                                    <action selector="onPressRemoveParticularCache:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Zb-ox-LW5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXF-sK-UYf">
+                                <rect key="frame" x="216" y="550" width="106" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="Pe6-db-LpQ"/>
+                                </constraints>
+                                <state key="normal" title="remove all"/>
+                                <connections>
+                                    <action selector="onPressRemoveAllCache:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4hJ-qV-wVf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cyw-CC-7hi" firstAttribute="top" secondItem="TJk-h5-10s" secondAttribute="bottom" constant="8" id="68p-GQ-3hP"/>
+                            <constraint firstItem="M1j-ou-hkK" firstAttribute="leading" secondItem="TJk-h5-10s" secondAttribute="trailing" constant="9" id="69s-CC-Sgs"/>
+                            <constraint firstItem="CiI-2l-eIU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="CbE-kL-N0g"/>
+                            <constraint firstItem="MZg-r4-xf2" firstAttribute="top" secondItem="mcp-zQ-wmo" secondAttribute="bottom" constant="8" id="Fyt-Qk-oYB"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="G0Y-h4-XyU" secondAttribute="leading" constant="8" id="GqN-mR-AUB"/>
+                            <constraint firstItem="mcp-zQ-wmo" firstAttribute="top" secondItem="nsC-ob-4bt" secondAttribute="bottom" constant="8" id="IBL-Pi-4dD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pXF-sK-UYf" secondAttribute="bottom" constant="20" id="NFT-vS-492"/>
+                            <constraint firstItem="nsC-ob-4bt" firstAttribute="top" secondItem="ulh-Fy-FQb" secondAttribute="bottom" constant="8" id="T62-oE-tSA"/>
+                            <constraint firstItem="pXF-sK-UYf" firstAttribute="leading" secondItem="Cyw-CC-7hi" secondAttribute="trailing" constant="8" id="UN2-G4-jlg"/>
+                            <constraint firstItem="pXF-sK-UYf" firstAttribute="top" secondItem="M1j-ou-hkK" secondAttribute="bottom" constant="7" id="UnQ-Zd-3wJ"/>
+                            <constraint firstItem="G0Y-h4-XyU" firstAttribute="top" secondItem="MZg-r4-xf2" secondAttribute="bottom" constant="8" id="XOU-Of-k8t"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="MZg-r4-xf2" secondAttribute="leading" constant="8" id="avS-jg-WMD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G0Y-h4-XyU" secondAttribute="bottom" constant="20" id="dKG-Kk-Yqx"/>
+                            <constraint firstItem="Cyw-CC-7hi" firstAttribute="leading" secondItem="G0Y-h4-XyU" secondAttribute="trailing" constant="8" id="fwp-1a-KLD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cyw-CC-7hi" secondAttribute="bottom" constant="20" id="ijF-oy-l7P"/>
+                            <constraint firstItem="ulh-Fy-FQb" firstAttribute="centerX" secondItem="nsC-ob-4bt" secondAttribute="centerX" id="je7-Iv-MmG"/>
+                            <constraint firstItem="TJk-h5-10s" firstAttribute="leading" secondItem="MZg-r4-xf2" secondAttribute="trailing" constant="8" id="ltq-Hp-YHC"/>
+                            <constraint firstItem="nsC-ob-4bt" firstAttribute="centerX" secondItem="mcp-zQ-wmo" secondAttribute="centerX" id="nJw-oU-108"/>
+                            <constraint firstItem="ulh-Fy-FQb" firstAttribute="top" secondItem="Sw7-pw-05w" secondAttribute="bottom" constant="8" id="ngq-oZ-Tmu"/>
+                            <constraint firstItem="mcp-zQ-wmo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="njl-4h-uZv"/>
+                            <constraint firstItem="CiI-2l-eIU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qqd-kb-x01"/>
+                            <constraint firstItem="Sw7-pw-05w" firstAttribute="centerX" secondItem="ulh-Fy-FQb" secondAttribute="centerX" id="zGo-5i-UrV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mConstraintLazyHorizontalCenter" destination="qqd-kb-x01" id="PdU-gb-WzZ"/>
+                        <outlet property="mConstraintLazyImageHeight" destination="2pO-zx-u8H" id="pD4-uD-cEA"/>
+                        <outlet property="mConstraintLazyImageWidth" destination="MhH-rO-Hw5" id="xck-8v-sjy"/>
+                        <outlet property="mConstraintLazyTop" destination="CbE-kL-N0g" id="GS5-86-uhv"/>
+                        <outlet property="mViewHeightValueStepper" destination="Cyw-CC-7hi" id="8kB-8h-8dg"/>
+                        <outlet property="mViewSampleLazyLoader" destination="CiI-2l-eIU" id="Fz1-xj-Db6"/>
+                        <outlet property="mViewWidthValueStepper" destination="TJk-h5-10s" id="dSH-qF-Olv"/>
+                        <outlet property="mViewXValueStepper" destination="MZg-r4-xf2" id="Mat-Va-TdP"/>
+                        <outlet property="mViewYValueStepper" destination="G0Y-h4-XyU" id="DRv-l8-mqe"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="Ff8-U8-aXb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="334"/>
+        </scene>
+    </scenes>
+</document>
